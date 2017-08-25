@@ -9,7 +9,9 @@
     "watch": "webpack --watch",
     "start": "webpack-dev-server --open",
     "server": "node server.js",
-    "product": "webpack -p"
+    "product": "webpack -p",
+    "build:dev": "webpack --env=dev --progress --profile --colors",
+    "build:dist": "webpack --env=prod --progress --profile --colors"
   },
   "author": "",
   "license": "ISC",

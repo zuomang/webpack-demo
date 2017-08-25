@@ -9,26 +9,12 @@ module.exports = {
         app: './src/index.js',
         print: './src/print.js'
     },
-    // 方便 track 具体 track down errors and warnings from import js file
-    // devtool: 'inline-source-map',
-
-    // use watch mode 热加载
-
-    // npm install --save-dev webpack-dev-server
-    // start dev server 作为静态资源服务器
-    // devServer: {
-        // contentBase: './dist'
-    // },
-
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Output Management'
         }),
         new CleanWebpackPlugin(['dist']),
         new ManifestPlugin(),
-
-        // 结合 express 和 webpack-dev-middleware 实现热加载, enable
-        new webpack.HotModuleReplacementPlugin()
     ],
     output: {
         filename: '[name].bundle.js',
